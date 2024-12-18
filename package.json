@@ -4,7 +4,8 @@
   "author": "Benjamin Chiang <forvais@nebulous.pw>",
   "workspaces": [
     "packages/base",
-    "packages/node"
+    "packages/node",
+    "packages/typescript"
   ],
   "bugs": {
     "url": "https://github.com/FoRVaiS/eslint-config-mono/issues"
