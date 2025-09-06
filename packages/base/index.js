@@ -29,7 +29,7 @@ module.exports = [
             '@stylistic/js/computed-property-spacing': ['error', 'never'],
             '@stylistic/js/curly-newline': ['error', { minElements: 2 }],
             '@stylistic/js/implicit-arrow-linebreak': ['error', 'beside'],
-            '@stylistic/js/indent': ['warn', 2],
+            '@stylistic/js/indent': ['warn', 2, { 'SwitchCase': 1 }],
             '@stylistic/js/indent-binary-ops': ['error', 2],
             '@stylistic/js/jsx-child-element-spacing': ['off'],
             '@stylistic/js/jsx-closing-bracket-location': ['error', 'tag-aligned'],
@@ -121,6 +121,7 @@ module.exports = [
             }],
             '@stylistic/js/no-mixed-spaces-and-tabs': 'error',
             '@stylistic/js/no-multi-spaces': ['error', {
+                ignoreEOLComments: true,
                 exceptions: {
                     VariableDeclarator: true,
                     Property: true,
