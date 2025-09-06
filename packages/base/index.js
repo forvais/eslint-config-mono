@@ -1,5 +1,6 @@
-const stylisticJs = require('@stylistic/eslint-plugin-js');
+const stylisticJs = require('@stylistic/eslint-plugin');
 
+/** @type {import('eslint').Linter.Config[]} */
 module.exports = [
     {
         plugins: {
@@ -26,10 +27,37 @@ module.exports = [
             }],
             '@stylistic/js/comma-style': ['error', 'last'],
             '@stylistic/js/computed-property-spacing': ['error', 'never'],
-            '@stylistic/js/func-call-spacing': ['error', 'never'],
+            '@stylistic/js/curly-newline': ['error', { minElements: 2 }],
             '@stylistic/js/implicit-arrow-linebreak': ['error', 'beside'],
             '@stylistic/js/indent': ['warn', 2],
+            '@stylistic/js/indent-binary-ops': ['error', 2],
+            '@stylistic/js/jsx-child-element-spacing': ['off'],
+            '@stylistic/js/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+            '@stylistic/js/jsx-closing-tag-location': ['error', 'tag-aligned'],
+            '@stylistic/js/jsx-curly-brace-presence': ['error'],
+            '@stylistic/js/jsx-curly-newline': ['error', {
+                multiline: 'require',
+                singleline: 'forbid',
+            }],
+            '@stylistic/js/jsx-curly-spacing': ['error'],
+            '@stylistic/js/jsx-equals-spacing': ['error', 'never'],
+            '@stylistic/js/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+            '@stylistic/js/jsx-function-call-newline': ['error'],
+            '@stylistic/js/jsx-indent-props': ['error', 2],
+            '@stylistic/js/jsx-max-props-per-line': ['error', { when: 'multiline' }],
+            '@stylistic/js/jsx-newline': ['error', { prevent: true, allowMultilines: true }],
+            '@stylistic/js/jsx-one-expression-per-line': ['error', { allow: 'single-line' }],
+            '@stylistic/js/jsx-pascal-case': ['error'],
             '@stylistic/js/jsx-quotes': ['error', 'prefer-double'],
+            '@stylistic/js/jsx-self-closing-comp': ['error'],
+            '@stylistic/js/jsx-sort-props': 'off',
+            '@stylistic/js/jsx-tag-spacing': ['error', {
+                closingSlash: 'never',
+                beforeSelfClosing: 'always',
+                afterOpening: 'never',
+                beforeClosing: 'never',
+            }],
+            '@stylistic/js/jsx-wrap-multilines': ['error'],
             '@stylistic/js/key-spacing': ['error', {
                 beforeColon: false,
                 afterColon: true,
@@ -51,6 +79,17 @@ module.exports = [
                 exceptAfterSingleLine: true,
             }],
             '@stylistic/js/max-statements-per-line': 'off',
+            '@stylistic/js/member-delimiter-style': ['error', {
+                multiline: {
+                    delimiter: 'comma',
+                    requireLast: true,
+                },
+                singleline: {
+                    delimiter: 'comma',
+                    requireLast: false,
+                },
+                multilineDetection: 'brackets',
+            }],
             '@stylistic/js/multiline-comment-style': 'off',
             '@stylistic/js/multiline-ternary': 'off',
             '@stylistic/js/new-parens': 'error',
@@ -122,6 +161,9 @@ module.exports = [
             '@stylistic/js/switch-colon-spacing': 'error',
             '@stylistic/js/template-curly-spacing': 'error',
             '@stylistic/js/template-tag-spacing': 'error',
+            '@stylistic/js/type-annotation-spacing': ['error'],
+            '@stylistic/js/type-generic-spacing': ['error'],
+            '@stylistic/js/type-named-tuple-spacing': ['error'],
             '@stylistic/js/wrap-iife': ['error', 'inside'],
             '@stylistic/js/wrap-regex': 'error',
             '@stylistic/js/yield-star-spacing': ['error', 'before'],

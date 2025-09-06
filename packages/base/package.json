@@ -1,7 +1,7 @@
 {
   "name": "@forvais/eslint-config-base",
   "description": "Configuration file for base ESLint rules",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Benjamin Chiang <forvais@nebulous.pw>",
   "bugs": {
     "url": "https://github.com/FoRVaiS/eslint-config-mono/issues"
@@ -26,6 +26,6 @@
     "url": "git+https://github.com/FoRVaiS/eslint-config-mono.git"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "^2.12.1"
+    "@stylistic/eslint-plugin": "^5.3.1"
   }
 }
