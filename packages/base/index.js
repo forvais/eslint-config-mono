@@ -27,7 +27,7 @@ module.exports = [
       }],
       '@stylistic/comma-style': ['error', 'last'],
       '@stylistic/computed-property-spacing': ['error', 'never'],
-      '@stylistic/curly-newline': ['error', { minElements: 2 }],
+      '@stylistic/curly-newline': ['error'],
       '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
       '@stylistic/indent': ['warn', 2, { 'SwitchCase': 1 }],
       '@stylistic/indent-binary-ops': ['error', 2],
