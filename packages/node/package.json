@@ -1,32 +1,40 @@
 {
   "name": "@forvais/eslint-config-node",
-  "description": "Configuration file for Node ESLint rules",
-  "version": "2.0.0",
-  "author": "Benjamin Chiang <chiangbenjamin991@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/FoRVaiS/eslint-config-mono/issues"
+  "description": "Node ESLint config",
+  "version": "3.0.0",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
-  "engines": {
-    "eslint": ">=9.17.0",
-    "node": ">=20.0.0"
-  },
-  "homepage": "https://github.com/FoRVaiS/eslint-config-mono#readme",
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "forvais"
-  ],
   "license": "MIT",
-  "main": "index.js",
-  "peerDependencies": {
-    "eslint": "^9.17.0"
-  },
+  "author": "Ben Chiang",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FoRVaiS/eslint-config-mono.git"
+    "url": "git+https://github.com/forvais/eslint-config-mono.git"
   },
-  "dependencies": {
-    "eslint-plugin-n": "^17.15.0",
-    "globals": "^15.13.0"
-  }
+  "main": "./dist/index.cjs",
+  "scripts": {
+    "build": "tsdown",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint index.mjs --no-error-on-unmatched-pattern"
+  },
+  "peerDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-plugin-n": "^18.0.1",
+    "globals": "^17.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-plugin-n": "^18.0.1",
+    "globals": "^17.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.4.0"
 }

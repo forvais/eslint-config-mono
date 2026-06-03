@@ -1,0 +1,22 @@
+{
+  "plugins": ["node-workspace"],
+  "include-component-in-tag": true,
+  "include-v-in-tag": true,
+  "tag-separator": "@",
+  "separate-pull-requests": true,
+  "packages": {
+    "packages/base": {
+      "path": "./packages/base",
+      "release-type": "node"
+    },
+    "packages/typescript": {
+      "path": "./packages/typescript",
+      "release-type": "node"
+    }
+    "packages/node": {
+      "path": "./packages/node",
+      "release-type": "node"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

@@ -1,0 +1,52 @@
+name: NPM publish
+
+on:
+  release:
+    types: [published]
+#
+jobs:
+  publish:
+    name: Publish to NPM
+    env:
+      NPM_CONFIG_PROVENANCE: "true"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@900f2210b1d28bbbd0bd22d17926b9e224e8f231 # v6
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: 24.x
+
+      - name: Extract package name
+        id: pkg
+        run: |
+          NAME="${{ github.event.release.tag_name }}"
+          PKG="${NAME%@*}"
+          echo "name=$PKG" >> $GITHUB_OUTPUT
+
+      - name: Build library
+        run: pnpm --filter "${{ steps.pkg.outputs.name }}" exec pnpm build
+
+      - name: Publish library
+        run: |
+          NAME="${{ steps.pkg.outputs.name }}"
+          VERSION=$(pnpm --filter "$NAME" exec jq -r .version package.json)
+
+          if [[ "$VERSION" == *"-"* ]]; then
+            TAG="${VERSION#*-}"
+            TAG="${TAG%%.*}"
+            echo "Publishing prerelease with tag: $TAG"
+          else
+            TAG="latest"
+            echo "Publishing stable release"
+          fi
+
+          pnpm --filter "$NAME" exec npm publish --provenance --tag "$TAG" --access public --no-git-checks
