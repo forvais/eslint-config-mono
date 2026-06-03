@@ -12,7 +12,7 @@
     "packages/typescript": {
       "path": "./packages/typescript",
       "release-type": "node"
-    }
+    },
     "packages/node": {
       "path": "./packages/node",
       "release-type": "node"
