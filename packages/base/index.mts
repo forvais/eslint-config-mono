@@ -276,6 +276,7 @@ export default defineConfig([
       'stylistic/implicit-arrow-linebreak': ['error', 'beside'],
       'stylistic/indent': ['error', 2, {
         SwitchCase: 1,
+        ignoreComments: true,
       }],
       'stylistic/indent-binary-ops': ['error', 2],
       'stylistic/jsx-child-element-spacing': ['off'],
