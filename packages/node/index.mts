@@ -9,6 +9,7 @@ const rules: Config['rules'] = {
   'n/no-extraneous-require': 'off',
   'n/no-unpublished-import': 'off',
   'n/no-unpublished-require': 'off',
+  'n/no-missing-import': 'off', // Doesn't work very well with typescript path aliasing and explicit extension typing
 };
 
 export default defineConfig(
