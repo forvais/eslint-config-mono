@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-node@v4.0.0...eslint-config-node@v4.1.0) (2026-06-08)
+
+
+### Features
+
+* **node:** disable no-missing-import ([ed7c3fe](https://github.com/forvais/eslint-config-mono/commit/ed7c3fefe89395fcc764f99bd0e521cc44249cc4))
+
 ## [4.0.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-node@v3.0.0...eslint-config-node@v4.0.0) (2026-06-04)
 
 
