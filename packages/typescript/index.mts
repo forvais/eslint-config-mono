@@ -12,7 +12,8 @@ export default defineConfig(
       'no-array-constructor': 'off', // overriden by 'typescript-eslint/no-array-constructor'
       'no-dupe-class-members': 'off', // overriden by 'typescript-eslint/no-dupe-class-members'
       'no-implied-eval': 'off', // overriden by 'typescript-eslint/no-implied-eval'
-      'no-shadow': 'error', // overriden by 'typescript-eslint/no-shadow'
+      'no-shadow': 'off', // overriden by 'typescript-eslint/no-shadow'
+      'no-unused-vars': 'off', // overriden by 'typescript-eslint/no-unused-vars'
     },
   },
   {
@@ -77,9 +78,7 @@ export default defineConfig(
       'typescript-eslint/no-array-delete': 'error',
       'typescript-eslint/no-base-to-string': 'error',
       'typescript-eslint/no-confusing-non-null-assertion': 'error',
-      'typescript-eslint/no-confusing-void-expression': ['error', {
-        ignoreVoidOperator: true,
-      }],
+      'typescript-eslint/no-confusing-void-expression': 'off', // Has conflicting rules, making this rule's usage ambiguous
       'typescript-eslint/no-deprecated': 'error',
       'typescript-eslint/no-dupe-class-members': 'error',
       'typescript-eslint/no-duplicate-enum-values': 'error',
@@ -103,7 +102,7 @@ export default defineConfig(
       'typescript-eslint/no-magic-numbers': 'off',
       'typescript-eslint/no-meaningless-void-operator': 'error',
       'typescript-eslint/no-misused-new': 'error',
-      'typescript-eslint/no-misused-promises': 'error',
+      'typescript-eslint/no-misused-promises': 'off', // Not entirely confident how this works yet in actual code
       'typescript-eslint/no-misused-spread': 'error',
       'typescript-eslint/no-mixed-enums': 'error',
       'typescript-eslint/no-namespace': 'error',
@@ -135,7 +134,7 @@ export default defineConfig(
       'typescript-eslint/no-unsafe-function-type': 'error',
       'typescript-eslint/no-unsafe-member-access': 'error',
       'typescript-eslint/no-unsafe-return': 'error',
-      'typescript-eslint/no-unsafe-type-assertion': 'error',
+      'typescript-eslint/no-unsafe-type-assertion': 'off', // By using type casting, the developer acknowledges they are bypassing the type system
       'typescript-eslint/no-unsafe-unary-minus': 'error',
       'typescript-eslint/no-unused-expressions': 'error',
       'typescript-eslint/no-unused-private-class-members': 'error',
@@ -160,8 +159,8 @@ export default defineConfig(
       'typescript-eslint/prefer-nullish-coalescing': 'error',
       'typescript-eslint/prefer-optional-chain': 'error',
       'typescript-eslint/prefer-promise-reject-errors': 'error',
-      'typescript-eslint/prefer-readonly': 'error',
-      'typescript-eslint/prefer-readonly-parameter-types': 'error',
+      'typescript-eslint/prefer-readonly': 'off',
+      'typescript-eslint/prefer-readonly-parameter-types': 'off',
       'typescript-eslint/prefer-reduce-type-parameter': 'error',
       'typescript-eslint/prefer-regexp-exec': 'error',
       'typescript-eslint/prefer-return-this-type': 'error',
@@ -174,7 +173,7 @@ export default defineConfig(
       'typescript-eslint/restrict-template-expressions': 'error',
       'typescript-eslint/return-await': 'error',
       'typescript-eslint/strict-boolean-expressions': 'error',
-      'typescript-eslint/strict-void-return': 'error',
+      'typescript-eslint/strict-void-return': 'off',
       'typescript-eslint/switch-exhaustiveness-check': 'error',
       'typescript-eslint/triple-slash-reference': 'error',
       'typescript-eslint/unbound-method': 'error',
