@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-base@v4.0.0...eslint-config-base@v4.1.0) (2026-06-08)
+
+
+### Features
+
+* **base:** allow block indentation for comments ([1d1caaa](https://github.com/forvais/eslint-config-mono/commit/1d1caaa99f7e3f8b71bb57b653c7e0f388bda18f))
+
 ## [4.0.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-base@v3.0.0...eslint-config-base@v4.0.0) (2026-06-04)
 
 
