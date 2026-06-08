@@ -3,6 +3,6 @@
   "packages/base+FILLER": "0.0.0",
   "packages/typescript": "4.1.0",
   "packages/typescript+FILLER": "0.0.0",
-  "packages/node": "4.0.0",
+  "packages/node": "4.1.0",
   "packages/node+FILLER": "0.0.0"
 }
