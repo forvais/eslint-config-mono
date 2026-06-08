@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-typescript@v4.0.0...eslint-config-typescript@v4.1.0) (2026-06-08)
+
+
+### Features
+
+* **ts:** disable confusing or annoying rules ([02084b0](https://github.com/forvais/eslint-config-mono/commit/02084b06e6285e3d9fe07a7bcc6f0f4d5218bb46))
+* **ts:** disable no-magic-numbers ([6916df2](https://github.com/forvais/eslint-config-mono/commit/6916df29ecc3cb2d1306c2b01bda78985bb0dfd4))
+
 ## [4.0.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-typescript@v3.0.0...eslint-config-typescript@v4.0.0) (2026-06-04)
 
 
