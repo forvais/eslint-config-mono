@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.2.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-base@v4.1.0...eslint-config-base@v4.2.0) (2026-09-01)
+
+
+### Features
+
+* **base:** modify various rules ([388eff6](https://github.com/forvais/eslint-config-mono/commit/388eff64801c9696df33232ea99b355084b1b3bf))
+* **deps:** update eslint to ^10.9.1 ([5bcc88f](https://github.com/forvais/eslint-config-mono/commit/5bcc88f792d34304507187c9600e4dff6b9a84fe))
+* **npm:** update package manager to pnpm@11.24.0 ([be2caf5](https://github.com/forvais/eslint-config-mono/commit/be2caf5c1a228adb5624df3011bc1e1c3d993550))
+
 ## [4.1.0](https://github.com/forvais/eslint-config-mono/compare/eslint-config-base@v4.0.0...eslint-config-base@v4.1.0) (2026-06-08)
 
 
