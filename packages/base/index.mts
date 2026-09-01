@@ -1,5 +1,3 @@
-/* eslint-disable typescript-eslint/no-magic-numbers */
-
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
@@ -37,7 +35,7 @@ export default defineConfig([
       'func-style': 'off',
       'getter-return': 'error',
       'grouped-accessor-pairs': 'off',
-      'guard-for-in': 'error',
+      'guard-for-in': 'off',
       'id-denylist': 'off',
       'id-length': 'off',
       'id-match': 'off',
@@ -133,7 +131,7 @@ export default defineConfig([
       'no-octal-escape': 'error',
       'no-param-reassign': 'error',
       'no-plusplus': 'off',
-      'no-promise-executor-return': 'error',
+      'no-promise-executor-return': ['error', { allowVoid: true }],
       'no-proto': 'error',
       'no-prototype-builtins': 'error',
       'no-redeclare': 'error',
@@ -199,7 +197,7 @@ export default defineConfig([
       }],
       'no-useless-return': 'error',
       'no-var': 'error',
-      'no-void': 'error',
+      'no-void': 'off',
       'no-warning-comments': ['off', {
         terms: ['todo', 'fixme', 'xxx'],
         location: 'start',
