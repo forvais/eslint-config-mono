@@ -24,12 +24,12 @@
     "lint:eslint": "eslint index.mjs --no-error-on-unmatched-pattern"
   },
   "peerDependencies": {
-    "eslint": "^10.4.0",
+    "eslint": "^10.9.1",
     "eslint-plugin-n": "^18.0.1",
     "globals": "^17.6.0"
   },
   "devDependencies": {
-    "eslint": "^10.4.0",
+    "eslint": "^10.9.1",
     "eslint-plugin-n": "^18.0.1",
     "globals": "^17.6.0"
   },
